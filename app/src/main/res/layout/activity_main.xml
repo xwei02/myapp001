@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViews2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="179dp"
+        android:layout_marginBottom="587dp"
+        android:text="猜拳遊戲"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="183dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="471dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViews2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="請輸入玩家姓名"
+            android:textColor="#D30B0B"
+            android:textColorHint="#E30B0B" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="342dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="220dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViews2">
+
+        <RadioButton
+            android:id="@+id/btn_scissor"
+            android:layout_width="22dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="剪刀" />
+
+        <RadioButton
+            android:id="@+id/btn_stone"
+            android:layout_width="41dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="石頭" />
+
+        <RadioButton
+            android:id="@+id/btn_paper"
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="布" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_mora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="250dp"
+        android:text="猜拳"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViews2" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="170dp"
+        android:text="名字"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_winner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViews2" />
+
+    <TextView
+        android:id="@+id/tv_winner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="170dp"
+        android:text="勝利者"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_mmora"
+        app:layout_constraintStart_toEndOf="@+id/tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/textViews2" />
+
+    <TextView
+        android:id="@+id/tv_mmora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="170dp"
+        android:text="我方出拳"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_cmora"
+        app:layout_constraintStart_toEndOf="@+id/tv_winner"
+        app:layout_constraintTop_toBottomOf="@+id/textViews2" />
+
+    <TextView
+        android:id="@+id/tv_cmora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="170dp"
+        android:text="電腦出拳"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_mmora"
+        app:layout_constraintTop_toBottomOf="@+id/textViews2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
